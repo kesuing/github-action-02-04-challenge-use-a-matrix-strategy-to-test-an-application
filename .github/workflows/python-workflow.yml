@@ -13,10 +13,10 @@ jobs:
     #----------------------------------------------#
     strategy:
       matrix:
-        platform: ["ubentu-latest", "windows-latest"]
+        platform: ["ubuntu-latest", "windows-latest", "macos-latest"]
         version: ["3.10", "3.9", "3.8", "3.7"]
         include:
-        - platform: ubentu-latest
+        - platform: ubuntu-latest
           version: "3.6"
         exclude:
         - platform: windows-latest
