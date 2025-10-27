@@ -13,14 +13,14 @@ jobs:
     #----------------------------------------------#
     strategy:
       matrix:
-        platform:["Ubentu","macOS","Windows"]
+        platform:["Ubentu-latest","macOS-latest","Windows-latest"]
         version:["3.10","3.9","3.8","3.7"]
         include:
-          -platform:ubentu-latest
-           version:"3.6"
+        -platform:ubentu-latest
+        version:"3.6"
         exclude:
-          -platform:windows-latest
-           version:"3.10"        
+        -platform:windows-latest
+         version:"3.10"        
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
